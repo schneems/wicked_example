@@ -1,0 +1,8 @@
+<h2>Thanks for signing up </h2>
+<%= form_for(@user, :url => wizard_path, :method => :put) do |f| %>
+  <%= f.text_field :zip, :placeholder => 'zip code' %>
+  <%= f.submit 'Next', :class => 'btn btn-primary' %>
+<% end %>
+
+
+<%= link_to 'skip', next_wizard_path %>
